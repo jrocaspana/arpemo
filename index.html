@@ -4,11 +4,26 @@
 		<title>ARPEMO - Asociaci&oacute;n Rosarina de Pesca con Mosca</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<meta name="description" content="Asociaci&oacute;n Rosarina de Pesca con Mosca">
+		<meta property="fb:app_id" content="1160018751294954" /> 
+		<meta property="og:title" content="ARPEMO - Asociaci&oacute;n Rosarina de Pesca con Mosca">
+		<meta property="og:type" content="website">
+		<meta property="og:description" content="Asociaci&oacute;n Rosarina de Pesca con Mosca">
+		<meta property="og:image" content="http://arpemo.org.ar/images/me.jpg">
+		<meta property="og:image:secure_url" content="https://arpemo.org.ar/images/me.jpg">
+		<meta property="og:image:width" content="1313">
+		<meta property="og:image:height" content="1638">
+		<meta property="og:url" content="https://arpemo.org.ar/">
+		<meta property="og:locale" content="es_AR">
+		<meta name="robots" content="index">
+
 		<link rel="icon" href="images/favicon-32x32.png" sizes="32x32">
 		<link rel="icon" href="images/favicon-192x192.png" sizes="192x192">
 		<link rel="apple-touch-icon" href="images/favicon-180x180.png">
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remodal/1.1.1/remodal.min.css" />
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remodal/1.1.1/remodal-default-theme.min.css" />
 	</head>
 	<body class="is-preload">
 
@@ -173,50 +188,71 @@
 						</article>
 
 						<!-- Contact -->
-							<article id="contacto" class="panel">
-								<header>
-									<h2>Cont&aacute;ctenos</h2>
-								</header>
-								<form action="#" method="post">
-									<div>
-										<div class="row">
-											<div class="col-6 col-12-medium">
-												<input type="text" name="name" placeholder="Nombre" />
-											</div>
-											<div class="col-6 col-12-medium">
-												<input type="text" name="email" placeholder="Email" />
-											</div>
-											<div class="col-12">
-												<input type="text" name="subject" placeholder="Asunto" />
-											</div>
-											<div class="col-12">
-												<textarea name="message" placeholder="Mensaje" rows="6"></textarea>
-											</div>
-											<div class="col-12">
-												<input type="submit" value="Enviar Mensaje" />
-											</div>
+						<article id="contacto" class="panel">
+							<header>
+								<h2>Contacto</h2>
+							</header>
+							<form id="contactform" name="_language" value="es">
+								<div class="remodal-bg">
+									<div class="row">
+										<div class="col-6 col-12-medium">
+											<input type="text" id="name" placeholder="Nombre" />
+										</div>
+										<div class="col-6 col-12-medium">
+											<input type="text" id="email" name="email" placeholder="Email" />
+										</div>
+										<div class="col-12">
+											<input type="text" id="subject" placeholder="Asunto" />
+										</div>
+										<div class="col-12">
+											<textarea id="message" placeholder="Mensaje" rows="6"></textarea>
+										</div>
+										<div class="col-12">
+											<!-- <input type="button" id="form-submit-btn" value="Enviar Mensaje" data-remodal-target="gracias" data-sitekey="6LfhGE0bAAAAAIx2LZ4thGN0ntsE1YoxxmnFEWEe" data-callback='onSubmit' data-action='submit' /> -->
+											
+											<button id="form-submit-btn" class="g-recaptcha" data-sitekey="6LfhGE0bAAAAAIx2LZ4thGN0ntsE1YoxxmnFEWEe" data-callback='onSubmit' data-action='submit'>Enviar</button>
 										</div>
 									</div>
-								</form>
-							</article>
+								</div>
+								<input type="hidden" name="*reply" value="email" />
+								<input type="hidden" name="*honeypot" />
+							</form>
+						</article>
 
 					</div>
 
 				<!-- Footer -->
 					<div id="footer">
 						<ul class="copyright">
-							<li>&copy; Asociaci&oacute;n Rosarina de Pesca con Mosca</li>
+							<li>&copy; Asociaci&oacute;n Rosarina de Pesca con Mosca</li> - arpemo.rosario@gmail.com
 						</ul>
 					</div>
 
 			</div>
 
+			<div class="remodal" data-remodal-id="gracias">
+				<button data-remodal-action="close" class="remodal-close"></button>
+				<h3>Gracias por contactarse!</h3>
+				<p>
+					Le responderemos a la brevedad
+				</p>
+				<br>
+				<button data-remodal-action="confirm" class="remodal-confirm">Cerrar</button>
+			</div>
+
 		<!-- Scripts -->
+			<script>
+				function onSubmit(token) {
+					document.getElementById("contactform").submit();
+				}
+			</script>
 			<script src="assets/js/jquery.min.js"></script>
 			<script src="assets/js/browser.min.js"></script>
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
-
+			<script src="https://www.google.com/recaptcha/api.js"></script>
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.10.0/js/lightbox.min.js"></script>
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/remodal/1.1.1/remodal.min.js"></script>
 	</body>
 </html>
