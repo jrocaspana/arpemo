@@ -22,8 +22,6 @@
 		<link rel="apple-touch-icon" href="images/favicon-180x180.png">
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remodal/1.1.1/remodal.min.css" />
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remodal/1.1.1/remodal-default-theme.min.css" />
 	</head>
 	<body class="is-preload">
 
@@ -192,25 +190,26 @@
 							<header>
 								<h2>Contacto</h2>
 							</header>
-							<form id="contactform" name="_language" value="es">
+							<form id="contactform" name="_language" value="es" action="https://api.web3forms.com/submit">
+								<input type="hidden" name="access_key" value="9b1d0992-dd2d-4d26-ab20-0c88364544ab">
 								<div class="remodal-bg">
 									<div class="row">
 										<div class="col-6 col-12-medium">
-											<input type="text" id="name" placeholder="Nombre" />
+											<input type="text" id="name" placeholder="Nombre" required />
 										</div>
 										<div class="col-6 col-12-medium">
-											<input type="text" id="email" name="email" placeholder="Email" />
+											<input type="text" id="email" name="email" placeholder="Email" required />
 										</div>
 										<div class="col-12">
-											<input type="text" id="subject" placeholder="Asunto" />
+											<input type="text" id="subject" placeholder="Asunto" required />
 										</div>
 										<div class="col-12">
-											<textarea id="message" placeholder="Mensaje" rows="6"></textarea>
+											<textarea id="message" placeholder="Mensaje" rows="5"></textarea>
 										</div>
+										<div class="h-captcha" data-captcha="true"></div>
 										<div class="col-12">
-											<!-- <input type="button" id="form-submit-btn" value="Enviar Mensaje" data-remodal-target="gracias" data-sitekey="6LfhGE0bAAAAAIx2LZ4thGN0ntsE1YoxxmnFEWEe" data-callback='onSubmit' data-action='submit' /> -->
-											
-											<button id="form-submit-btn" class="g-recaptcha" data-sitekey="6LfhGE0bAAAAAIx2LZ4thGN0ntsE1YoxxmnFEWEe" data-callback='onSubmit' data-action='submit'>Enviar</button>
+											<input type="button" id="form-submit-btn" value="Enviar Mensaje"/>
+											<button type="submit">Enviar Mensaje</button>
 										</div>
 									</div>
 								</div>
@@ -230,29 +229,12 @@
 
 			</div>
 
-			<div class="remodal" data-remodal-id="gracias">
-				<button data-remodal-action="close" class="remodal-close"></button>
-				<h3>Gracias por contactarse!</h3>
-				<p>
-					Le responderemos a la brevedad
-				</p>
-				<br>
-				<button data-remodal-action="confirm" class="remodal-confirm">Cerrar</button>
-			</div>
-
 		<!-- Scripts -->
-			<script>
-				function onSubmit(token) {
-					document.getElementById("contactform").submit();
-				}
-			</script>
 			<script src="assets/js/jquery.min.js"></script>
 			<script src="assets/js/browser.min.js"></script>
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
-			<script src="https://www.google.com/recaptcha/api.js"></script>
-			<script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.10.0/js/lightbox.min.js"></script>
-			<script src="https://cdnjs.cloudflare.com/ajax/libs/remodal/1.1.1/remodal.min.js"></script>
+			<script src="https://web3forms.com/client/script.js" async defer></script>
 	</body>
 </html>
