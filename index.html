@@ -204,11 +204,10 @@
 											<input type="text" id="subject" placeholder="Asunto" required />
 										</div>
 										<div class="col-12">
-											<textarea id="message" placeholder="Mensaje" rows="5"></textarea>
+											<textarea id="message" placeholder="Mensaje" rows="5" required ></textarea>
 										</div>
 										<div class="h-captcha" data-captcha="true"></div>
 										<div class="col-12">
-											<input type="button" id="form-submit-btn" value="Enviar Mensaje"/>
 											<button type="submit">Enviar Mensaje</button>
 										</div>
 									</div>
@@ -223,13 +222,17 @@
 				<!-- Footer -->
 					<div id="footer">
 						<ul class="copyright">
-							<li>&copy; Asociaci&oacute;n Rosarina de Pesca con Mosca</li> - arpemo.rosario@gmail.com
+							<li>&copy; <span id="spanYear">2023</span></li><li>Asociaci&oacute;n Rosarina de Pesca con Mosca</li><li>arpemo.rosario@gmail.com</li>
 						</ul>
 					</div>
-
 			</div>
 
 		<!-- Scripts -->
+		<script>
+			var d = new Date();
+			var n = d.getFullYear();
+			document.getElementById("spanYear").innerHTML = n;
+		</script>
 			<script src="assets/js/jquery.min.js"></script>
 			<script src="assets/js/browser.min.js"></script>
 			<script src="assets/js/breakpoints.min.js"></script>
